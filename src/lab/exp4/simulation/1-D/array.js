@@ -1,3 +1,5 @@
+
+
 window.view = {
 	numbers: new Array(),
 	lastRedDiv: new Object(),
@@ -52,6 +54,7 @@ window.view = {
 		this.addClickEvent('btnStart', function() { view.displayElements() })
 		this.addClickEvent('btnNext', function() { view.sortArray() })
 	},
+	
 	proceedToStartButton: function() {
 		var userInput = this.getArraySize()
 		if( isNaN( userInput ) === false ) {
@@ -87,6 +90,7 @@ window.view = {
 			this.generateRandomNumbers()
 		else if (element[1].checked)
 			this.getUserInput()
+			
 	},
 	createBoxes: function() {
 		for ( i = 0 ; i < this.numbers.length ; i++ ) {
