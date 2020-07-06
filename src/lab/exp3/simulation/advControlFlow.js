@@ -169,15 +169,27 @@ window.view = {
 		var inputValue = document.getElementById('simpleLoopInput').value
 		if (selected_loop === 'for' && inputValue !== '' && !isNaN(model.inp) )
 		{
-			this.displayLoop('forLoopContent', 'codeContentFor1')
+			if(inputValue < 0 || inputValue > 20)
+			{
+				alert("Invalid Input");
+			}
+			else this.displayLoop('forLoopContent', 'codeContentFor1');
 		}
 		if (selected_loop === 'while' && inputValue !== '' && !isNaN(model.inp))
 		{
-			this.displayLoop('whileLoopContent', 'codeContentWhile1')
+			if(inputValue < 0 || inputValue > 20)
+			{
+				alert("Invalid Input");
+			}
+			else this.displayLoop('whileLoopContent', 'codeContentWhile1');
 		}
 		if (selected_loop === 'do-while' && inputValue !== '' && !isNaN(model.inp))
 		{
-		 	this.displayLoop('dowhileLoopContent', 'codeContentDoWhile1')
+			if(inputValue < 0 || inputValue > 20)
+			{
+				alert("Invalid Input");
+			}
+		 	else this.displayLoop('dowhileLoopContent', 'codeContentDoWhile1');
 		}
 		this.disableButton('btnStart')
 		this.changeClass( 'btnStart', 'buttonDisable startButton')
